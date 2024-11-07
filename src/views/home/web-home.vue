@@ -1,15 +1,3 @@
-<script lang="ts">
-import {defineComponent} from 'vue'
-
-export default defineComponent({
-  name: 'WebHome',
-  data () {
-    return {
-    }
-  },
-})
-</script>
-
 <template>
   <router-link
       to="/admin/theme2"
@@ -24,6 +12,18 @@ export default defineComponent({
     <h5>后台管理模板（主题3）</h5>
   </router-link>
 </template>
+
+<script lang="ts">
+import {defineComponent} from 'vue'
+
+export default defineComponent({
+  name: 'WebHome',
+  data () {
+    return {
+    }
+  },
+})
+</script>
 
 <style scoped>
 
