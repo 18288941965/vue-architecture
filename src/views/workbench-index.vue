@@ -17,11 +17,7 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-  name: 'WebHome',
-  data () {
-    return {
-    }
-  },
+  name: 'WorkbenchIndex',
 })
 </script>
 

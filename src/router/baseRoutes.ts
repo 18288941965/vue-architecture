@@ -4,19 +4,19 @@ const baseRoutes: RouteRecordRaw[] = [
     {
         path: '/',
         name: 'AppLogin',
-        component: () => import('../views/home/web-home.vue'),
-        meta: { title: '首页' },
+        component: () => import('../views/workbench-index.vue'),
+        meta: { title: '工作台' },
     },
     {
         path: '/admin/theme2',
         name: 'AdminTheme2',
-        component: () => import('../views/theme/theme2/admin-theme2.vue'),
+        component: () => import('../module/theme2/admin-theme2.vue'),
         meta: { title: 'AdminTheme2' },
     },
     {
         path: '/admin/theme3',
         name: 'AdminTheme3',
-        component: () => import('../views/theme/theme3/admin-theme3.vue'),
+        component: () => import('../module/theme3/admin-theme3.vue'),
         meta: { title: 'AdminTheme3' },
     },
 ]
