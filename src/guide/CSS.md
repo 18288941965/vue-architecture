@@ -78,3 +78,6 @@
     - slide
     - zoom
     - rotate
+
+## 用户下拉面板
+使用details > summary 组件
