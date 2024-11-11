@@ -19,6 +19,12 @@ const baseRoutes: RouteRecordRaw[] = [
         component: () => import('../module/theme3/admin-theme3.vue'),
         meta: { title: 'AdminTheme3' },
     },
+    {
+        path: '/details/index',
+        name: 'DetailsIndex',
+        component: () => import('../module/details/details-index.vue'),
+        meta: { title: 'DetailsIndex' },
+    },
 ]
 
 export default baseRoutes

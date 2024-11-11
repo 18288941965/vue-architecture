@@ -1,0 +1,29 @@
+details > summary{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    cursor: pointer;
+}
+details > summary > span{
+    padding: 0 20px;
+    color: red;
+}
+details[open]>summary::before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 900;
+    display: block;
+    cursor: default;
+    content: " ";
+    background: transparent;
+}
+details[open]>summary.hv-bg{
+    background-color: pink;
+}
+details[open] .expand-mg{
+    transform: translateY(4px);
+}
