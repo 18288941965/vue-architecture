@@ -50,7 +50,6 @@ const menuItems = ref(props.menuItems)
 </template>
 
 <style scoped>
-
 a {
     text-decoration: none;
 }
