@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import {ref, watch} from 'vue'
+import {ref} from 'vue'
 
 const prop = defineProps(({
     isCollapse: {
         type: Boolean,
-        default: false
-    }
+        default: false,
+    },
 }))
 
 const isCollapse = ref(prop.isCollapse)

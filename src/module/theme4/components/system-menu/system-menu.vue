@@ -8,12 +8,12 @@ const route = useRoute()
 const props = defineProps({
     isCollapse: {
         type: Boolean,
-        default: false
+        default: false,
     },
     menuItems: {
         type: Array,
-        default: () => []
-    }
+        default: () => [],
+    },
 })
 
 const menuItems = ref(props.menuItems)

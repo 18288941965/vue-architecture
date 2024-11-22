@@ -11,7 +11,7 @@ const isCollapse = ref(false)
 const menuItems = [{
     name: '首页',
     path: '/',
-    icon: 'House'
+    icon: 'House',
 },
 {
     name: '查询统计',
@@ -26,14 +26,14 @@ const menuItems = [{
                 {
                     name: '查询1',
                     path: '/queryStatistics/query/query1',
-                    icon: 'Search'
+                    icon: 'Search',
                 },
                 {
                     name: '查询2',
                     path: '/queryStatistics/query/query2',
-                    icon: 'Search'
-                }
-            ]
+                    icon: 'Search',
+                },
+            ],
         },
         {
             name: '统计',
@@ -43,16 +43,16 @@ const menuItems = [{
                 {
                     name: '统计1',
                     path: '/queryStatistics/statistics/statistics1',
-                    icon: 'Histogram'
+                    icon: 'Histogram',
                 },
                 {
                     name: '统计2',
                     path: '/queryStatistics/statistics/statistics2',
-                    icon: 'Histogram'
-                }
-            ]
-        }
-    ]
+                    icon: 'Histogram',
+                },
+            ],
+        },
+    ],
 },
 {
     name: '系统设置',
@@ -62,29 +62,29 @@ const menuItems = [{
         {
             name: '用户管理',
             path: '/user',
-            icon: 'User'
+            icon: 'User',
         },
         {
             name: '角色管理',
             path: '/role',
-            icon: 'UserFilled'
+            icon: 'UserFilled',
         },
         {
             name: '菜单管理',
             path: '/menu',
-            icon: 'Menu'
+            icon: 'Menu',
         },
         {
             name: '消息管理',
             path: '/message',
-            icon: 'Message'
+            icon: 'Message',
         },
         {
             name: '错误日志',
             path: '/errorLog',
-            icon: 'Failed'
-        }
-    ]
+            icon: 'Failed',
+        },
+    ],
 },
 {
     name: '代码编辑器',
@@ -95,7 +95,7 @@ const menuItems = [{
     name: '百度',
     path: 'https://www.baidu.com',
     icon: 'Search',
-    target: '_blank'
+    target: '_blank',
 }]
 
 const collapseClick = (val: boolean) => {
