@@ -20,6 +20,12 @@ const baseRoutes: RouteRecordRaw[] = [
         meta: { title: 'AdminTheme3' },
     },
     {
+        path: '/admin/theme4',
+        name: 'AdminTheme4',
+        component: () => import('../module/theme4/admin-theme4.vue'),
+        meta: { title: 'AdminTheme4' },
+    },
+    {
         path: '/details/index',
         name: 'DetailsIndex',
         component: () => import('../module/details/details-index.vue'),
