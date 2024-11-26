@@ -129,11 +129,11 @@ const collapseClick = (val: boolean) => {
 
         & .el-aside {
             height: 100%;
-            padding: 0 0 0 10px;
+            //padding: 0 0 0 10px;
             box-sizing: border-box;
 
             & .el-header {
-                padding: 0;
+                padding: 0 0 0 10px;
                 height: 60px;
                 display: flex;
                 justify-content: space-between;
@@ -169,9 +169,5 @@ const collapseClick = (val: boolean) => {
             }
         }
     }
-}
-
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 240px;
 }
 </style>

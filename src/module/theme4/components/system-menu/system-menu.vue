@@ -42,7 +42,9 @@ const handSelect = (key: string, keyPath: string[]) => {
             @close="handleClose"
             @select="handSelect"
         >
-            <menu-item :menu-items="menuItems" />
+            <menu-item v-for="(item,index) in menuItems"
+                       :key="'item' + index"
+                       :menu="item || {}" />
         </el-menu>
     </el-scrollbar>
 </template>

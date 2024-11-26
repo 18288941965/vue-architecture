@@ -29,6 +29,15 @@
         </router-link>
       </li>
 
+        <li>
+            <router-link
+                to="/admin/theme4"
+                target="_blank"
+            >
+                <h5>后台系统模板4</h5>
+            </router-link>
+        </li>
+
       <li>VUE 类似手机应用管理页面</li>
       <li>VUE 各种类型字典选择组件</li>
       <li>VUE 表格分页组件</li>

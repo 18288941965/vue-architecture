@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import {ref} from 'vue'
 
-const prop = defineProps(({
+const prop = defineProps({
     isCollapse: {
         type: Boolean,
         default: false,
     },
-}))
+})
 
 const isCollapse = ref(prop.isCollapse)
 
