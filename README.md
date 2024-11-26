@@ -43,6 +43,6 @@ Error: EPERM: operation not permitted, unlink 'E:\vuevte\node_modules\@esbuild\w
 
 ### 本系统遵循的命名规范
 1. 文件夹名全部小写（示例：system-header）
-2. ts文件全部采用小驼峰方式命名（实列：menuIndex）
+2. ts文件全部采用小驼峰方式命名（示例：menuIndex）
 3. vue文件名全部小写（示例：menu-index）
 4. vue内部name使用大驼峰方式命名（示例：MenuIndex）
