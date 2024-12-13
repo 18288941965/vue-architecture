@@ -97,16 +97,12 @@
       width: calc(100vw - 275px); border-radius: 12px;">
 
         <div style="border-bottom: 1px solid #EBEEF5;padding: 10px;">
-          <el-button type="primary">新增用户</el-button>
-          <el-button style="margin-right: 15px;">导出Excel</el-button>
+          <el-button type="primary" :icon="Plus">新增</el-button>
           <el-select
-              placeholder="历史查询表单"
-              style="width: 240px"
+              placeholder="历史查询条件"
+              style="width: 280px;margin-left: 15px;"
           >
           </el-select>
-          <el-button>保存查询表单</el-button>
-
-          <span style="font-size: 14px;color: red;margin-left: 100px;">表单操作提示图标 / 用下拉块展示</span>
         </div>
 
         <div  style="border-bottom: 1px solid #EBEEF5;padding: 20px 20px 5px 20px;">
@@ -170,15 +166,15 @@
               </el-form-item>
             </div>
 
-            <el-form-item >
-              <div style="display: flex;width: 100%;">
-                <el-button type="success" @click="onSubmit">查 询</el-button>
-                <div style="flex: 1"></div>
-                <el-button>更多条件（展开 / 收缩）</el-button>
-                <el-button>表格列配置</el-button>
-              </div>
-            </el-form-item>
           </el-form>
+        </div>
+
+        <div style="display: flex;margin-top: 15px;justify-content: center;">
+          <el-button type="success" @click="onSubmit" :icon="Search">查询</el-button>
+          <el-button>更多条件</el-button>
+          <el-button>保存查询条件</el-button>
+          <el-button>导出Excel</el-button>
+          <el-button>表格列配置</el-button>
         </div>
 
         <div style="margin: 15px;box-shadow: 0 1px 1px -1px #dddddd;">
@@ -199,13 +195,14 @@
 
 <script lang="ts">
 import {defineComponent, reactive} from 'vue'
-import {Expand, House, Search, ArrowDown, Sunny, Message, Setting, Document, Location} from '@element-plus/icons-vue'
+import {Expand, House, Plus, Search, ArrowDown, Sunny, Message, Setting, Document, Location} from '@element-plus/icons-vue'
 
 export default defineComponent({
   name: 'admin-theme2',
   components: {
     Expand,
     House,
+    Plus,
     Search,
     ArrowDown,
     Sunny,
@@ -253,6 +250,8 @@ export default defineComponent({
       },
     ]
     return {
+      Plus,
+      Search,
       form,
       onSubmit,
       tableData,
