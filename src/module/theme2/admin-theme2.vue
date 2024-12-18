@@ -1,13 +1,25 @@
 <template>
-  <div style="display: grid;grid-template-columns: 260px 1fr;
+  <div style="display: grid;grid-template-columns: 240px 1fr 60px ;
   background-color: #F6F8FA;height: 100vh;">
-    <div style="margin: 0 15px;">
-      <div style="height: 60px;display: flex;align-items: center;font-weight: bolder;font-size: 16px;">
-        <el-avatar :size="36" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png" />
-        项目图标和模块名称
+
+    <div>
+      <div style="
+      height: 36px;
+      margin: 10px 15px 15px 15px;
+      border-radius: 6px;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      border: 1px solid #DBDFE9;
+      font-weight: bolder;font-size: 15px">
+        <el-icon :size="18" style="margin-right: 10px;">
+          <Search />
+        </el-icon>
+        系统管理
       </div>
 
-      <nav style="height: calc(100vh - 60px);">
+      <nav class="theme2-nav">
         <el-menu
             default-active="2"
             class="el-menu-vertical-demo"
@@ -45,59 +57,13 @@
       </nav>
     </div>
     <div>
-      <header style="height: 60px;display: flex;grid-gap: 20px;align-items: center;margin-right: 15px;">
-        <div>
-          <el-icon :size="20">
-            <Expand />
-          </el-icon>
-        </div>
-
-        <div style="font-weight: bolder;">菜单管理</div>
-        <el-breadcrumb separator="/">
-          <el-breadcrumb-item>系统管理</el-breadcrumb-item>
-          <el-breadcrumb-item>资源管理</el-breadcrumb-item>
-        </el-breadcrumb>
-
-        <div style="flex: 1"></div>
-
-        <el-avatar :size="36" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png" />
-        <div>admin</div>
-        <div>
-          <el-icon :size="20">
-            <ArrowDown />
-          </el-icon>
-        </div>
-
-        <div>
-          <el-icon :size="20">
-            <House />
-          </el-icon>
-        </div>
-
-        <div>
-          <el-icon :size="20">
-            <Search />
-          </el-icon>
-        </div>
-
-        <div>
-          <el-icon :size="20">
-            <Sunny />
-          </el-icon>
-        </div>
-
-        <div>
-          <el-icon :size="20">
-            <Message />
-          </el-icon>
-        </div>
-      </header>
-      <main style="background-color: #ffffff;height: calc(100vh - 75px);
+      <main style="background-color: #ffffff;height: calc(100vh - 20px);
+      margin: 10px 0 10px 0;
       border: 1px solid #D1D9E0;
-      width: calc(100vw - 275px); border-radius: 12px;">
+     ; border-radius: 12px;">
 
-        <div style="border-bottom: 1px solid #EBEEF5;padding: 10px;">
-          <el-button type="primary" :icon="Plus">新增</el-button>
+        <div style="border-bottom: 1px solid #EBEEF5;padding: 10px;display: flex;align-items: center;">
+          <div style="font-weight: bolder;font-size: 15px;">菜单管理</div>
           <el-select
               placeholder="历史查询条件"
               style="width: 280px;margin-left: 15px;"
@@ -169,12 +135,21 @@
           </el-form>
         </div>
 
-        <div style="display: flex;margin-top: 15px;justify-content: center;">
-          <el-button type="success" @click="onSubmit" :icon="Search">查询</el-button>
-          <el-button>更多条件</el-button>
-          <el-button>保存查询条件</el-button>
-          <el-button>导出Excel</el-button>
-          <el-button>表格列配置</el-button>
+        <div style="display: grid; grid-template-columns: 1fr 2fr 1fr;
+        padding: 0 15px;
+        margin-top: 15px;justify-content: center;">
+          <div>
+            <el-button type="primary" :icon="Plus">新增</el-button>
+            <el-button>导出Excel</el-button>
+          </div>
+          <div style="text-align: center">
+            <el-button type="success" @click="onSubmit" :icon="Search">查询</el-button>
+            <el-button :icon="ArrowDown">更多条件</el-button>
+            <el-button>保存查询条件</el-button>
+          </div>
+          <div style="text-align: right">
+            <el-button>表格列配置</el-button>
+          </div>
         </div>
 
         <div style="margin: 15px;box-shadow: 0 1px 1px -1px #dddddd;">
@@ -185,24 +160,40 @@
           </el-table>
         </div>
 
-        <div style="display: flex;height: 40px;align-items: center;margin-left: 15px;">
+        <div style="display: flex;height: 40px;align-items: center;margin-left: 15px;justify-content: center;">
           <el-pagination background layout="total, sizes, prev, pager, next, jumper" :total="1000" />
         </div>
       </main>
+    </div>
+
+    <div style="text-align: center;padding-top: 10px;">
+      <el-avatar :size="36" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png" />
+
+      <div v-for="item in 6" :key="item" style="
+      width: 40px; height: 40px;
+      text-align: center;
+      margin: 15px 10px;
+      border: 1px solid #EBEEF5;
+      padding-top: 8px;
+      border-radius: 50%;">
+        <el-icon :size="20" color="#999999">
+          <Search />
+        </el-icon>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent, reactive} from 'vue'
-import {Expand, House, Plus, Search, ArrowDown, Sunny, Message, Setting, Document, Location} from '@element-plus/icons-vue'
+import {defineComponent, reactive, ref} from 'vue'
+import {Expand, House, Plus, Search, ArrowDown,
+  Sunny, Message, Setting, Document, Location} from '@element-plus/icons-vue'
 
 export default defineComponent({
   name: 'admin-theme2',
   components: {
     Expand,
     House,
-    Plus,
     Search,
     ArrowDown,
     Sunny,
@@ -211,7 +202,7 @@ export default defineComponent({
     Document,
     Location,
   },
-  setup(props, ctx) {
+  setup() {
     const form = reactive({
       name: '',
       region: '',
@@ -227,31 +218,19 @@ export default defineComponent({
       console.log('submit!')
     }
 
-    const tableData = [
-      {
+    const tableData = ref<Array>([])
+    for (let i = 0; i < 10; i++) {
+      tableData.value.push({
         date: '2016-05-03',
         name: 'Tom',
         address: 'No. 189, Grove St, Los Angeles',
-      },
-      {
-        date: '2016-05-02',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles',
-      },
-      {
-        date: '2016-05-04',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles',
-      },
-      {
-        date: '2016-05-01',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles',
-      },
-    ]
+      })
+    }
+
     return {
       Plus,
       Search,
+      ArrowDown,
       form,
       onSubmit,
       tableData,
@@ -260,6 +239,24 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style>
+.theme2-nav .el-menu{
+  border-right: 0;
+  background-color: transparent;
+}
+</style>
+<style scoped lang="scss">
 
+.gradient-text {
+  font-size: 50px; /* 文字大小 */
+  font-weight: bold; /* 加粗文字 */
+  background: linear-gradient(to right, red, blue); /* 从左到右的渐变色 */
+  -webkit-background-clip: text; /* 让背景应用到文字 */
+  color: transparent; /* 让文字颜色透明，显示背景渐变 */
+}
+
+  .theme2-nav{
+    height: calc(100vh - 80px);
+    background-color: transparent;
+  }
 </style>
