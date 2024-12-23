@@ -25,6 +25,8 @@ export default [
       'comma-dangle': ['error', 'always-multiline'],
       // 强制 Vue 组件名使用大驼峰命名
       'vue/component-options-name-casing': ['error', 'PascalCase'],
+      // 禁用 no-explicit-any 规则
+      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
 ]
