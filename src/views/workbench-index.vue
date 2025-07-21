@@ -1,42 +1,56 @@
 <template>
-  <div class="workbench-index" style="border: 1px solid;width: 360px;height: 400px;margin: auto;
-  margin-top: 100px;line-height: 40px;">
-    <ul>
-      <li>
-        <router-link
-            to="/admin/theme2"
-            target="_blank"
-        >
-          <h5>后台管理模板 / 适用单模块</h5>
-        </router-link>
-      </li>
+  <div class="workbench-index">
+    <section>
+      <router-link
+          to="/admin/theme2"
+          target="_blank"
+          class="wb-link"
+      >
+        后台管理模板
+      </router-link>
+      <p>
+        适用于首页为应用中心，点击应用后调整到新的浏览器tab页面，页面缓存数据，但是没有菜单的点击记录。
+      </p>
+    </section>
 
-      <li>
-        <router-link
-            to="/admin/theme3"
-            target="_blank"
-        >
-          <h5>后台管理模板 / 适用多模块</h5>
-        </router-link>
-      </li>
+    <section>
+      <router-link
+          to="/admin/theme3"
+          target="_blank"
+          class="wb-link"
+      >
+        后台管理模板
+      </router-link>
+      <p>
+        适用于所有菜单在左侧展示！顶部有历史记录。
+      </p>
+    </section>
 
-      <li>
-        <router-link
-            to="/details/index"
-            target="_blank"
-        >
-          <h5>详细信息展现元素</h5>
-        </router-link>
-      </li>
-        <li>
-            <router-link
-                to="/admin/theme4"
-                target="_blank"
-            >
-                <h5>后台系统模板4</h5>
-            </router-link>
-        </li>
-    </ul>
+    <section>
+      <router-link
+          to="/admin/theme4"
+          target="_blank"
+          class="wb-link"
+      >
+        后台管理模板
+      </router-link>
+      <p>
+        dev
+      </p>
+    </section>
+
+    <section>
+      <router-link
+          to="/details/index"
+          target="_blank"
+          class="wb-link"
+      >
+        详细信息展现元素
+      </router-link>
+      <p>
+        适合页面用户信息展开模块类似的组件。
+      </p>
+    </section>
   </div>
 </template>
 
@@ -49,12 +63,18 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-  .workbench-index{
-    & ul li{
-      background-color: #EBEEF5;
-      margin: 5px;
-      padding: 0 20px;
+  .workbench-index {
+    height: 100%;
+    background-image: url("../assets/workbench-index-bg.svg");
+    padding: 10px;
+  }
+  section{
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    color: #ffffff;
+    & .wb-link{
+      color: #ffffff;
     }
   }
-
 </style>
