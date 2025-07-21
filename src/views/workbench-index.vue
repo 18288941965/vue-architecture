@@ -28,7 +28,6 @@
           <h5>详细信息展现元素</h5>
         </router-link>
       </li>
-
         <li>
             <router-link
                 to="/admin/theme4"
@@ -37,12 +36,6 @@
                 <h5>后台系统模板4</h5>
             </router-link>
         </li>
-
-      <li>VUE 类似手机应用管理页面</li>
-      <li>VUE 各种类型字典选择组件</li>
-      <li>VUE 表格分页组件</li>
-      <li>动态大屏组件</li>
-      <li>Dialog弹出多类型封装</li>
     </ul>
   </div>
 </template>

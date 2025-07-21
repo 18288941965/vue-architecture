@@ -218,7 +218,7 @@ export default defineComponent({
       console.log('submit!')
     }
 
-    const tableData = ref<Array>([])
+    const tableData = ref<Array<any>>([])
     for (let i = 0; i < 10; i++) {
       tableData.value.push({
         date: '2016-05-03',
