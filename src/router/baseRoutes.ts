@@ -31,12 +31,6 @@ const baseRoutes: RouteRecordRaw[] = [
         component: () => import('../components/component-demo.vue'),
         meta: { title: '组件示例' },
     },
-    {
-        path: '/details/index',
-        name: 'DetailsIndex',
-        component: () => import('../module/details/details-index.vue'),
-        meta: { title: 'DetailsIndex' },
-    },
 ]
 
 export default baseRoutes

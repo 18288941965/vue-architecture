@@ -41,18 +41,6 @@
 
     <section>
       <router-link
-          to="/details/index"
-          target="_blank"
-          class="wb-link"
-      >
-        详细信息展现元素
-      </router-link>
-      <p>
-        适合页面用户信息展开模块类似的组件。
-      </p>
-    </section>
-    <section>
-      <router-link
           to="/component/demo"
           target="_blank"
           class="wb-link"

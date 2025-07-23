@@ -4,9 +4,9 @@
       class="mgr-medium"
   >
     <summary
-        class="drop-down-button arrow-down hv-bg"
+        class="details-summary-demo"
     >
-     用户信息
+     展开或关闭面板
     </summary>
     <div
         class="details-index-context-demo"
@@ -41,8 +41,16 @@ export default defineComponent({
 </script>
 
 <style scoped>
-  @import "details.css";
+  @import "../assets/details.css";
 
+  .details-summary-demo{
+    width: 140px;
+    padding-left: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #409eff;
+    color: #ffffff;
+  }
   .details-index-context-demo{
     border: 1px solid greenyellow;
     height: 200px;
