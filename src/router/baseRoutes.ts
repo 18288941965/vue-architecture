@@ -26,6 +26,12 @@ const baseRoutes: RouteRecordRaw[] = [
         meta: { title: 'AdminTheme4' },
     },
     {
+        path: '/component/demo',
+        name: 'ComponentDemo',
+        component: () => import('../components/component-demo.vue'),
+        meta: { title: '组件示例' },
+    },
+    {
         path: '/details/index',
         name: 'DetailsIndex',
         component: () => import('../module/details/details-index.vue'),

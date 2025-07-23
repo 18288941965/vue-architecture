@@ -51,6 +51,18 @@
         适合页面用户信息展开模块类似的组件。
       </p>
     </section>
+    <section>
+      <router-link
+          to="/component/demo"
+          target="_blank"
+          class="wb-link"
+      >
+        组件示例
+      </router-link>
+      <p>
+        基于element plus 封装的组件或者自定义的组件。
+      </p>
+    </section>
   </div>
 </template>
 
